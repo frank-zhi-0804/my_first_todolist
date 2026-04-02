@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master   # 如果你是 main 就改成 main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 拉代码
+        uses: actions/checkout@v3
+
+      - name: 🟢 安装 Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📦 安装依赖
+        run: npm install
+
+      - name: 🏗️ 打包项目
+        run: npm run build
+
+      - name: 🚀 部署到 gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
