@@ -26,4 +26,7 @@
  由于我没有系统性的学过html,css,JavaScript语法，因此大多数代码都是按着视频敲的，
  也有的是ai帮的忙，但是我已经基本可以看懂代码，不再是看着代码愣神了
 
+ ## 🌐 在线预览
+https://frank-zhi-0804.github.io/my_first_todolist/
+
  ps：数据库平时是关着的，因为打开的时候要钱😣
