@@ -57,7 +57,7 @@ async function update(item) {
         v-model="str"
         type="text"
         class="todo-input"
-        placeholder="Add a todo"
+        placeholder="Add a todo" 
         @keyup.enter="add"
       />
       <div @click="add" class="todo-button">Add Todo</div>
